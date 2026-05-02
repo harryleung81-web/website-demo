@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARRALIGN4 | Operational Clarity & Business Expertise</title>
+    <link rel="stylesheet" href="style_v4.css">
+    <link rel="icon" type="image/png" href="image/pf2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="sticky-nav">
+   <div class="logo-container">
+            <a href="index_v4.html">
+                <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="nav-logo">
+            </a>
+   </div>
+
+
+   <div class="nav-links">
+	    <a href="index_v4.html">Home</a>
+            <!-- <a href="#process">Process</a>-->
+            <!-- <a href="#team">Meet The Team</a> -->
+            <!-- <a href="#faq">FAQ</a>-->
+
+            <a href="#team">Meet The Team</a>
+            <a href="index_v4_connect.html" class="btn-cta">Let's Connect</a>
+            </div>
+
+   <div class="nav-divider">
+   </div>
+</header>
+
+
+<section id="team">
+    
+<div class="team-bg-wrapper">
+	<div class="container">
+    <div class="leadership-section">
+        <h2 class="subtitle">Meet Our Team</h2>
+        <p class="subtitle-caption">100+ Years of Combined Experience</p>
+        
+        <div class="grid">
+            <div class="member" onclick="openBio('mea')">
+                <h4>Mea Kwon</h4>
+		<p><u>Founding Partner</u></p>				
+                <p>Financial Services & Human Capital</p>
+            </div>
+            <div class="member" onclick="openBio('harry')">
+                <h4>Harry Leung</h4>
+		<p><u>Founding Partner</u></p>
+                <p>Data Infrastructure & Architecture</p>
+            </div>
+            <div class="member" onclick="openBio('nancy')">
+                <h4>Nancy Maloney</h4>
+		<p><u>Founding Partner (Advisory)</u></p>
+                <p>C.P.A. & Data Governance</p>
+            </div>
+            <div class="member" onclick="openBio('natalie')">
+                <h4>Natalie Johnson</h4>
+		<p><u>Advisory</u></p>
+                <p>Learning & Development</p>
+            </div>
+            <!-- <div class="member" onclick="openBio('person5')">
+                <h4>Name of Person 5</h4>
+                <p>Title/Expertise 5</p>
+            </div> -->
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+<div id="bioModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeBio()">&times;</span>
+        <h2 id="bioName"></h2>
+        <h4 id="bioTitle"></h4>
+        <hr>
+        <p id="bioText"></p>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2026 PARRALIGN. All rights reserved. | info@parralign.com</p>
+    </footer>
+
+   
+<script src="script.js"></script>
+
+</body>
+</html>

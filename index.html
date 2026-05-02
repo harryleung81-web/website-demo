@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parralign | Operational Clarity & Business Expertise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/pf2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header class="sticky-nav">
+   	<div class="logo-container">
+            <a href="index.html">
+                <img src="image/ParralignTransP.png" alt="PARRALIGN Logo" class="nav-logo">
+            </a>
+   	</div>
+
+
+	<div class="nav-links">
+	    <a href="index.html">Home</a>
+            <a href="index_Team.html">Meet The Team</a>
+            <a href="index_connect.html" class="btn-cta">Let's Connect</a>
+        </div>
+	<div class="nav-divider">
+	</div>
+	</header>
+
+	<header class="hero">
+    <div class="container">
+        <h1>Operational clarity, built on business expertise.</h1>
+        <p>Parralign partners with organizations to assess, redesign, and streamline processes for compensation, talent operations, finance, and beyond.</p>
+        
+		<section id="whowhatour">
+        <div class="grid" style="margin-top: 50px;">
+            <div class="wwo" onclick="openB3('who')">
+                <h4>Who We Are</h4>
+            </div>
+            <div class="wwo" onclick="openB3('what')">
+                <h4>What We Do</h4>
+            </div>
+            <div class="wwo" onclick="openB3('our')">
+                <h4>Our Focus</h4>
+            </div>
+        </div>
+			</section>
+    </div>
+</header> 
+
+<div id="b3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeB3()">&times;</span>
+        <h2 id="b3Name"></h2>
+        <hr>
+        <p id="b3description"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 PARRALIGN. All rights reserved. | info@parralign.com</p>
+</footer>
+
+   
+<script src="script.js"></script>
+
+</body>
+</html>

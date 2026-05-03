@@ -1,18 +1,12 @@
 export async function onRequestPost(context) {
   try {
-    // 1. Check if the API key even exists
-    if (!context.env.RESEND_API_KEY) {
-      return new Response("Configuration Error: RESEND_API_KEY is missing in Cloudflare Dashboard.", { status: 500 });
-    }
-
     const data = await context.request.formData();
     const name = data.get('name');
     const email = data.get('email');
     const message = data.get('message');
 
-    // 2. Simple validation
-    if (!name || !email || !message) {
-      return new Response("Please fill out all fields.", { status: 400 });
+    if (!context.env.RESEND_API_KEY) {
+      return new Response("API Key Missing in Cloudflare Settings", { status: 500 });
     }
 
     const res = await fetch('https://api.resend.com/emails', {
@@ -30,14 +24,18 @@ export async function onRequestPost(context) {
     });
 
     if (res.ok) {
-      // 303 See Other is the correct redirect for a POST result
+      // Redirects to your home page with a success message in the URL
       return Response.redirect(new URL('/index.html?success=true', context.request.url), 303);
     } else {
       const errorText = await res.text();
-      return new Response(`Resend API Error: ${errorText}`, { status: 500 });
+      return new Response(`Resend Error: ${errorText}`, { status: 500 });
     }
-
   } catch (err) {
-    return new Response(`Internal Server Error: ${err.message}`, { status: 500 });
+    return new Response(`Server Error: ${err.message}`, { status: 500 });
   }
+}
+
+// Adding this lets you test the URL in your browser directly
+export async function onRequestGet() {
+  return new Response("Function is active! Use the form to submit.");
 }

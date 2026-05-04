@@ -90,8 +90,8 @@ if (contactForm) {
         submitBtn.innerText = 'Sending...';
 
         // These IDs come from your EmailJS Dashboard
-        const serviceID = 'default_service';
-        const templateID = 'template_xxxxx';
+        const serviceID = 'service_01ds56n';
+        const templateID = 'template_0p8574y';
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {

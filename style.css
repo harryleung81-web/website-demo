@@ -587,6 +587,42 @@ min-height: 1.1em;
     to { transform: scale(1); opacity: 1; }
 }
 
+/* 1. The Container for the background */
+.success-bg-img {
+    position: relative; /* Required for the absolute image inside */
+    overflow: hidden;   /* Keeps the image corners rounded to match the box */
+    background: #ffffff; 
+}
+
+/* 2. The Faded Image Layer */
+.success-bg-img::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    
+    /* REPLACE 'image/pf2.png' with your desired background image path */
+    background-image: url('image/ParralignTransP.png'); 
+    
+    background-size: contain;
+	background-repeat: no-repeat;
+    background-position: center;
+    
+    /* CONTROL THE FADE: 0.05 is very faint, 0.2 is clearly visible */
+    opacity: 0.1; 
+    
+    z-index: 0; /* Puts image behind text */
+}
+
+/* 3. Ensure text and button stay above the image */
+.modal-inner {
+    position: relative;
+    z-index: 1; 
+}
+
+
 
 .close-btn {
     position: absolute;

@@ -76,3 +76,47 @@ window.onclick = function(event) {
         b3Modal.style.display = "none";
     }
 };
+
+
+// --- Function for Contact Form & Success Modal ---
+const contactForm = document.getElementById('contactForm');
+const successModal = document.getElementById('successModal');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        submitBtn.innerText = 'Sending...';
+
+        // These IDs come from your EmailJS Dashboard
+        const serviceID = 'default_service';
+        const templateID = 'template_xxxxx';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                submitBtn.innerText = 'Submit';
+                successModal.style.display = 'flex';
+                contactForm.reset();
+            }, (err) => {
+                submitBtn.innerText = 'Submit';
+                alert("Send failed. Please email info@parralign.com directly.");
+                console.error("EmailJS Error:", err);
+            });
+    });
+}
+
+function closeSuccessModal() {
+    document.getElementById('successModal').style.display = "none";
+}
+
+// Update your window.onclick to also close the success modal
+window.onclick = function(event) {
+    const bioModal = document.getElementById('bioModal');
+    const b3Modal = document.getElementById('b3Modal');
+    const successModal = document.getElementById('successModal');
+
+    if (bioModal && event.target === bioModal) bioModal.style.display = "none";
+    if (b3Modal && event.target === b3Modal) b3Modal.style.display = "none";
+    if (successModal && event.target === successModal) successModal.style.display = "none";
+};

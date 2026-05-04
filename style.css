@@ -560,7 +560,7 @@ min-height: 1.1em;
 /* The Checkmark Circle */
 .modal-icon-success {
     font-size: 50px;
-    color: #2ecc71; /* Success Green */
+    color: #ffffff; /* Success Green */
     background: #e8f8f0;
     width: 80px;
     height: 80px;

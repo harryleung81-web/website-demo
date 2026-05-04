@@ -570,7 +570,7 @@ min-height: 1.1em;
 }
 
 .modal-content-success h3 {
-    color: var(--2ndary);
+    color: #ffffff;
     margin-top: 0;
     font-size: 1.8rem;
 }

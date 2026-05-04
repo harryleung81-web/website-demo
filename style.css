@@ -560,7 +560,7 @@ min-height: 1.1em;
 /* The Checkmark Circle */
 .modal-icon-success {
     font-size: 50px;
-    color: #ffffff; /* Success Green */
+    color: #2ecc71; /* Success Green */
     background: #e8f8f0;
     width: 80px;
     height: 80px;
@@ -570,13 +570,13 @@ min-height: 1.1em;
 }
 
 .modal-content-success h3 {
-    color: #ffffff;
+    color: var(--2ndary);
     margin-top: 0;
     font-size: 1.8rem;
 }
 
 .modal-content-success p {
-    color: #666;
+    color: #ffffff;
     margin-bottom: 25px;
     font-size: 1rem;
 }

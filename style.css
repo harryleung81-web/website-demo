@@ -528,7 +528,64 @@ min-height: 1.1em;
 }
 .modal-content hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 20px 0; }
 
+/* --- SUCCESS MODAL STYLES --- */
 
+/* The Background Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 77, 87, 0.85); /* Uses your --2ndary teal with transparency */
+    backdrop-filter: blur(8px);        /* Soft blur effect to keep focus on the message */
+    display: none;                     /* Hidden by default, shown via JS flex */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;                     /* Ensures it stays above the sticky nav */
+}
+
+/* The Success Box */
+.modal-content-success {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: modalPop 0.3s ease-out; /* Smooth pop-in animation */
+}
+
+/* The Checkmark Circle */
+.modal-icon-success {
+    font-size: 50px;
+    color: #2ecc71; /* Success Green */
+    background: #e8f8f0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.modal-content-success h3 {
+    color: var(--2ndary);
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.modal-content-success p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Animation for the popup */
+@keyframes modalPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 
 
 .close-btn {

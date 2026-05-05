@@ -471,20 +471,46 @@ min-height: 1.1em;
     backdrop-filter: blur(40px); /* Blur effect for site background */
 }
 
+/* SHARED MODAL CONTENT (Applies to both B3 and Bio) */
+.modal-content {
+    position: relative;        /* Required for the absolute logo anchor */
+    margin: 10% auto;
+    padding: 70px 40px 40px;   /* Room for logo (Top: 70px) */
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Style the logo inside the modal */
+#b3Modal .modal-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 35px; /* Adjust height as needed */
+    width: auto;
+    opacity: 0.8; /* Optional: makes it slightly subtle */
+	z-index: 10; /* Ensures it stays above the frosted glass effect */
+}
+
+
 /* --- B3 MODAL (Home Page) --- */
 #b3Modal .modal-content {
     background-color: rgba(255, 255, 255, 0); /* Transparent white box */
     backdrop-filter: blur(1px); /* Frosted glass effect for the box itself */
     
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
-    margin: 10% auto;
-    padding: 40px;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
+    /*margin: 10% auto;
+    padding: 70px 40px 40px;
     border-radius: 12px;
     width: 80%;
     max-width: 600px;
     position: relative;
     color: #ffffff; /* Text color changed to white for readability on dark bkg */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    /*box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+	padding-top: 60px; /* Adds space at the top so the logo doesn't hit the text */
 }
 
 #b3Name {
@@ -503,26 +529,37 @@ min-height: 1.1em;
 #bioModal .modal-content {
     background-color: #151922; /* Transparent white box rgba(255, 255, 255, 0.15); */
     backdrop-filter: blur(15px); /* Frosted glass effect for the box itself */
-    
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
-    margin: 10% auto;
+    padding-top: 40px;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border to define edges */
+    /*margin: 10% auto;
     padding: 40px;
     border-radius: 12px;
     width: 80%;
     max-width: 600px;
     position: relative;
     color: #ffffff; /* Text color changed to white for readability on dark bkg */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    /* box-shadow: 0 20px 40px rgba(0,0,0,0.4); */
+}
+/* Style the logo inside the modal */
+#bioModal .modal-logo {
+    position: relative; /* Switch from absolute to relative */
+    display: block;      /* Allows centering via margin */
+    margin: 0 auto 20px auto; /* Centers horizontally and adds 20px space below */
+    top: 0;              /* Resets the 20px top from the general style */
+    left: 0;             /* Resets the 20px left from the general style */
+    height: 30px;        /* Optional: Make it slightly larger if it's a centerpiece */
 }
 
+
 #bioName {
-    color: var(--primary);               /* Brand color for names */
+    color: #ffffff;               /* Brand color for names */
     font-size: 1.8rem;
     margin-bottom: 0;
 }
 
 #bioTitle {
     font-style: italic;
+	color: #ececec;
     opacity: 0.8;
     margin-top: 5px;
 }
@@ -750,5 +787,13 @@ footer {
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 2rem; /* Shrinks the headline slightly on phones */
+    }
+	.modal-logo {
+        height: 30px;
+        top: 15px;
+        left: 15px;
+    }
+    .modal-content {
+        padding-top: 50px;
     }
 }

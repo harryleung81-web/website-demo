@@ -442,7 +442,7 @@ min-height: 1.1em;
 
 /* Full-width light grey background */
 .team-bg-wrapper {
-   	background-color: #f9f9f9;
+   	background-color: #eeeeee;
     width: 100%; /* Changed from 100vw to 100% since it's no longer nested */
     padding: 60px 0; /* Adjust this number to control top/bottom internal air */
     border-top: 1px solid #eee;

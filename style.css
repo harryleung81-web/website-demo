@@ -401,7 +401,7 @@ min-height: 1.1em;
 .wwo:hover { 
     background-color: var(--2ndary); 
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
 }
 .wwo:hover h4, 
 .wwo:hover p {

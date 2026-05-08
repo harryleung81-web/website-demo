@@ -339,7 +339,7 @@ min-height: 1.1em;
 	transition: transform 0.2s ease, background-color 0.2s ease;
     /* This calculation accounts for the 30px gaps to fit exactly 3 items */
     flex: 0 1 200px; 
-    height: 300px;          /* Prevents them from getting too skinny */
+    height: 170px;          /* Prevents them from getting too skinny */
     
    /* THE SQUARE FIX */
     display: flex;

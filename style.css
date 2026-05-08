@@ -125,7 +125,7 @@ h1, h2, h3, h4, .section-title, .subtitle {
 
 /* 2. Hover effect: Change opacity */
 .btn-cta:hover {
-    opacity: 0.1;
+    opacity: 0.5;
     color: #fff !important; /* Keeps text white on hover instead of turning primary color */
 }
 
